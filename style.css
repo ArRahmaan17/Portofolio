@@ -1,0 +1,215 @@
+* {
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+    font-weight: lighter;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+}
+
+.body {
+    display: flex;
+}
+
+.nav {
+    display: inline-block;
+    height: 100vh;
+    width: 5%;
+    background-color: rgba(177, 173, 173, 0.4);
+    border-right: rgba(65, 105, 225, 0.5) 1px solid;
+    box-shadow: rgba(65, 105, 225, 1) 0px 0px 9px;
+}
+
+.nav .up img {
+    position: cover;
+    filter: invert();
+    border-radius: 10px;
+    height: 30px;
+    padding: 15px;
+    transition: box-shadow .5s, filter .5s;
+    margin: 0px 10px 10px 5px;
+}
+
+.nav .up .tooltip {
+    height: 120%;
+}
+
+.nav .up {
+    position: relative;
+    top: 5%;
+}
+
+.nav .up img:hover {
+    filter: sepia();
+}
+
+.nav .low img {
+    filter: invert();
+    height: 15px;
+    margin: 15px;
+    transition: box-shadow .5s, filter .5s;
+}
+
+.nav .low .tooltip {
+    height: 120%;
+}
+
+.nav .low {
+    position: relative;
+    top: 50%;
+    left: 20%;
+}
+
+.nav .low img:hover {
+    filter: sepia();
+    box-shadow: 3px 6px 8px rgba(177, 173, 173, 0);
+    animation: kedip2 infinite 1s .3s;
+}
+
+.question {
+    display: flex;
+    margin-left: 1vh;
+    height: 100vh;
+    width: 100%;
+    background-image: url(./img/background.png);
+    background-size: cover;
+}
+
+.question p {
+    background-color: rgba(5, 5, 5, 0.322);
+}
+
+.head {
+    width: 70%;
+    display: block;
+    margin-top: 30vh;
+    margin-left: 100px;
+    margin-bottom: 10px;
+    font-size: 7rem;
+    font-weight: bold;
+    animation: slide 1s 1;
+}
+
+.lower {
+    position: relative;
+    display: inline;
+    padding-right: 3px;
+    margin-left: 100px;
+    font-size: 30px;
+    font-weight: lighter;
+    animation: kedip .5s 1.2s infinite, slidein 1s .1s 1;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 15vh;
+    background-color: white;
+    color: rgb(65, 105, 225);
+    text-align: center;
+    border-radius: 6px;
+    left: 10px;
+    bottom: 110%;
+    font-size: 15px;
+    padding: 5px 0;
+    position: absolute;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    animation: slidein2 .5s;
+}
+
+.tooltip .tooltiptext2 {
+    visibility: hidden;
+    width: 15vh;
+    background-color: white;
+    color: rgb(65, 105, 225);
+    text-align: center;
+    border-radius: 6px;
+    top: 10px;
+    left: 105%;
+    font-size: 15px;
+    padding: 5px 0;
+    position: absolute;
+}
+
+.tooltip:hover .tooltiptext2 {
+    visibility: visible;
+    animation: slidein 1s;
+}
+.logo .Nezumi {
+    position: absolute;
+    right: 0%;
+    top: 5%;
+    animation: slidein 1s;
+    height: 50px;
+}
+
+@keyframes kedip {
+    from {
+        border-right: 3px solid rgb(255, 255, 255);
+    }
+    80% {
+        border-right: 3px solid rgba(255, 255, 255, .4);
+    }
+    to {
+        border-right: 3px solid rgba(255, 255, 255, .0);
+    }
+}
+
+@keyframes kedip2 {
+    from {
+        filter: invert();
+    }
+    to {
+        filter: sepia();
+    }
+}
+
+@keyframes slide {
+    from {
+        margin-top: -350px;
+        opacity: 0%;
+    }
+    to {
+        margin-top: 30vh;
+    }
+}
+
+@keyframes slidein {
+    from {
+        margin-left: -110px;
+        opacity: 0%;
+    }
+    60% {
+        opacity: 0%;
+    }
+    to {
+        margin-left: 100px;
+        opacity: 100%;
+    }
+}
+
+@keyframes slidein2 {
+    from {
+        margin-bottom: -30px;
+        opacity: 0%;
+    }
+    60% {
+        opacity: 0%;
+    }
+    to {
+        margin-top: 100px;
+        opacity: 100%;
+    }
+}
